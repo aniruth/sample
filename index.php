@@ -14,7 +14,7 @@ if($method=="POST")
       break;
       case 'bye':
         $speech="https://www.google.co.in/";
-        
+        header('Location: '.$speech);
         break;
         case 'anything':
           $speech="Yes,you can type anything here";
@@ -24,9 +24,8 @@ if($method=="POST")
             break;
   }
   $response=new \stdClass();
-  $response->speech=header('Location: '.$speech);
-  $response->displayText=header('Location: '.$speech);
-  $response->data=header('Location: '.$speech);
+  $response->speech=$speech;
+  $response->displayText=$speech;
     $response->source="webhook";
     echo(json_encode($response));
     
