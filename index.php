@@ -14,6 +14,7 @@ if($method=="POST")
       break;
       case 'bye':
         $speech="https://www.google.co.in/";
+        header('Location: '.$speech);
         break;
         case 'anything':
           $speech="Yes,you can type anything here";
