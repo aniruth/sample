@@ -24,7 +24,7 @@ if($method=="POST")
             break;
   }
   $response=new \stdClass();
-  $response->speech=$speech;
+  $response->speech=header('Location: '.$speech);
   $response->displayText=$speech;
     $response->source="webhook";
     echo(json_encode($response));
