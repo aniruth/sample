@@ -13,7 +13,7 @@ if($method=="POST")
       $speech="Hi,Nice to meet you";
       break;
       case 'bye':
-        $speech="Bye,good night";
+        $speech="https://www.google.co.in/";
         break;
         case 'anything':
           $speech="Yes,you can type anything here";
