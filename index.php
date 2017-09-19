@@ -13,7 +13,8 @@ if($method=="POST")
       $speech="Hi,Nice to meet you";
       break;
       case 'bye':
-        $speech="<speak> One second <break time="3s"/> OK, I have used the best quantum processing algorithms known to computer science! Your silly name is $color $number. I hope you like it. <audio src=https://www.partnersinrhyme.com/files/sounds1/WAV/sports/baseball/Ball_Hit_Cheer.wav></audio> </speak>";
+        $speech="<speak>
+      <audio src=https://examaple.com/wav/Dtmf-1.wav></audio></speak>";
         break;
         case 'anything':
           $speech="Yes,you can type anything here";
