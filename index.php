@@ -14,7 +14,7 @@ if($method=="POST")
       break;
       case 'bye':
         $speech="<speak>Tone one
-        audio src=https://examaple.com/wav/Dtmf-1.wav></audio>
+        audio src=https://mixstep.co/yqjydlftvwtf></audio>
         </speak>";
         break;
         case 'anything':
