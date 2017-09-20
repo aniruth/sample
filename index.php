@@ -2,16 +2,16 @@
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         
-        $msg=`<speak>
-    Tone one
-    <audio src="https://vocaroo.com/i/s1Hx6owg7uHq"></audio>
-    </speak>`;
+//         $msg=`<speak>
+//     Tone one
+//     <audio src="https://vocaroo.com/i/s1Hx6owg7uHq"></audio>
+//     </speak>`;
         sendMessage(array(
             "source" => $update["result"]["source"],
-            "speech" => $msg,
+            "speech" =>"Hello from webhook",
             "displayText" => "Hello from webhook",
-            "contextOut" => array(),
-            "data"=>array('google'->array('expect_user_response'->true,'is_ssml'->true))
+            "contextOut" => array()
+           
         ));
     }
 }
