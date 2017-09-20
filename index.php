@@ -27,23 +27,26 @@ if($method=="POST")
   $speech='<speak>
       <audio src=https://vocaroo.com/i/s0sROf0pL7RI></audio></speak>';
   
-  $response={
-    speech: $speech,
-    data:{
-      google:{
-        "expect_user_response": true,
-        "is_ssml": true
-      }
-    }
-  };  
+  $response1= array(
+    'google' => array(
+        'expect_user_response': true,
+        'is_ssml': true
+    )
+);    
+
+$obj = new stdClass();
+$obj->speech=$speech;
+$obj->data = $response1;
+
+echo json_encode($obj);
+
+
 //   $response->speech=$speech;
 //   //$response->source="webhook";
 //   $response->data='google:{
 //         "expect_user_response": true,
 //         "is_ssml": true
-//       }';
-  
-    echo($response);
+//       }';  
     
 }
 else{
