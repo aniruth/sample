@@ -28,7 +28,12 @@ if($method=="POST")
   $response->speech=$speech;
   $response->displayText=$speech;
   $response->source="webhook";
-  
+  $response->data =array(
+    'google' => array(
+        'expect_user_response'-> true,
+        'is_ssml'-> true
+    )
+);    
     echo(json_encode($response));
     
 }
