@@ -10,7 +10,8 @@ function processMessage($update) {
             "source" => $update["result"]["source"],
             "speech" => $msg,
             "displayText" => "Hello from webhook",
-            "contextOut" => array()
+            "contextOut" => array(),
+            "data"=>array('google'->array('expect_user_response'->true,'is_ssml'->true))
         ));
     }
 }
