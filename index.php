@@ -24,16 +24,16 @@ if($method=="POST")
 //             break;
 //   }
   
-  $speech="<speak>
-      <audio src=https://vocaroo.com/i/s0sROf0pL7RI></audio></speak>";
+  $speech='<speak>
+      <audio src=https://vocaroo.com/i/s0sROf0pL7RI></audio></speak>';
   
   $response=new \stdClass();  
   $response->speech=$speech;
   //$response->source="webhook";
-  $response->data="google:{
-        expect_user_response: true,
-        is_ssml: true
-      }";
+  $response->data='google:{
+        "expect_user_response": true,
+        "is_ssml": true
+      }';
   
     echo(json_encode($response));
     
