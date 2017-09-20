@@ -3,7 +3,8 @@ function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
         sendMessage(array(
             "source" => $update["result"]["source"],
-            "speech" => "Hello from webhook",
+            "speech" => '<speak>
+      <audio src=https://vocaroo.com/i/s1Hx6owg7uHq></audio></speak>',
             "displayText" => "Hello from webhook",
             "contextOut" => array()
         ));
