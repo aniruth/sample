@@ -1,10 +1,14 @@
 <?php
 function processMessage($update) {
     if($update["result"]["action"] == "sayHello"){
+        
+        $msg=`<speak>
+    Tone one
+    <audio src="https://vocaroo.com/i/s1Hx6owg7uHq"></audio>
+    </speak>`;
         sendMessage(array(
             "source" => $update["result"]["source"],
-            "speech" => '<speak>
-      <audio src=https://vocaroo.com/i/s1Hx6owg7uHq></audio></speak>',
+            "speech" => $msg,
             "displayText" => "Hello from webhook",
             "contextOut" => array()
         ));
